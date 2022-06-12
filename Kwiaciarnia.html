@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style1.css" />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- boxicons icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!--Owl Carousel Min.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <!--Owl Carousel Theme Min.css-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!-- Carousel link -->
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./owl.carousel.min.js"></script>
+  
+
+    <title>Kwiaciarnia Kwiatomania</title>
+  </head>
+  <!-- ----------------------------------------BODY------------------------------------------->
+  <body>
+    <!-- ----------------------------------------SIDEBAR------------------------------------------->
+    <header>
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class="bx bxs-florist icon"></i>
+          <div class="logo_name">Kwiatomania</div>
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="#">
+              <i class="bi bi-house-door"></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-chat-heart"></i>
+              <span class="links_name">Wstęp</span>
+            </a>
+            <span class="tooltip">Wstęp</span>
+          </li>
+          <li>
+            <a href="#id1">
+              <i class="bi bi-person-fill"></i>
+              <span class="links_name">O nas</span>
+            </a>
+            <span class="tooltip">O nas</span>
+          </li>
+          <li>
+            <a href="#id2">
+              <i class="bi bi-flower3"></i>
+              <span class="links_name">Oferta</span>
+            </a>
+            <span class="tooltip">Oferta</span>
+          </li>
+          <li>
+            <a href="#id4">
+              <i class="bi bi-people-fill"></i>
+              <span class="links_name">Opinie</span>
+            </a>
+            <span class="tooltip">Opinie</span>
+          </li>
+          <li>
+            <a href="#id5">
+              <i class="bi bi-image"></i>
+              <span class="links_name">Zdjęcia</span>
+            </a>
+            <span class="tooltip">Zdjęcia</span>
+          </li>
+          <li>
+            <a href="#id6">
+              <i class="bi bi-stopwatch"></i>
+              <span class="links_name">Godziny otwarcia</span>
+            </a>
+            <span class="tooltip">Godziny otwarcia</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      searchBtn.addEventListener("click", () => {
+        // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
+    <section
+      id="background"
+      class="container-fluid row align-items-center text-center"
+    >
+      <h1 class="h1 text-center pt-md-5 pb-md-5 text-light back">
+        Kwiaciarnia Kwiatomania <br />
+        Zapraszamy
+      </h1>
+    </section>
+
+    <!-- ----------------------------------------SIDEBAR------------------------------------------->
+    <!-- ----------------------------------------ABOUT------------------------------------------->
+    <section class="container-fluid pt-md-5 pb-md-5">
+      <div class="row justify-content-center pt-xl-5 pb-xl-5">
+        <h1 class="col-md-8 text-center pb-xl-5 pt-xl-5">
+          Witam Cię w mojej warszawskiej kwiaciarni, gdzie znajdziesz
+          najpiękniejsze kwiaty w mieście!
+        </h1>
+      </div>
+
+      <div class="row justify-content-center pt-md-5">
+        <h2 class="col-md-7 pb-md-5 text-center">
+          Od kiedy pamiętam, uwielbiałam otaczać się kwiatami. Ich piękne
+          kolory, kształty i zapachy niemal natychmiast poprawiały mi humor.
+          Właśnie dlatego, pewnego dnia postanowiłam odmienić swoje życie,
+          otwierając kwiaciarnię na warszawskim Mokotowie. <br />
+          <br />
+          Do florystyki podchodzę z pasją oraz zaangażowaniem, w mojej pracowni
+          znajdziesz m.in. bogaty wybór świeżych kwiatów ciętych, kwiatów
+          doniczkowych, zamówisz niepowtarzalny bukiet ślubny czy wiązankę
+          pogrzebową. <br /><br />
+          Odwiedź mnie i przekonaj się sam(a). <br /><br />
+          Serdecznie zapraszam <i class="bi bi-emoji-smile"></i> <br /><br />
+          - Ewa -
+        </h2>
+      </div>
+    </section>
+    <!-- ----------------------------------------ABOUT------------------------------------------->
+    <!-- ----------------------------------------HISTORY------------------------------------------->
+    <section id="id1" class="container pt-md-5 pb-md-5">
+      <h3 class="text-center pb-md-3">O nas</h3>
+      <h1 class="text-center">Moja Historia</h1>
+      <hr />
+      <h4 class="text-center pb-md-5">Jesteśmy na rynku już od 5 lat.</h4>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="btn btn-outline-secondary accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+             <h3> Początek</h3>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <h2 class="accordion-body">Od kiedy pamiętam uwielbiam przyrodę i kwiaty. Zawsze lubiłam mieć w mieszkaniu dużo kwiatów doniczkowych. Często kupowałam kwiaty cięte. Wtedy jeszcze pracowałam jako pracownik biurowy. Ale wiedziałam, że ta praca mi nie odpowiada. </h2>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="btn btn-outline-secondary accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <h3>Ważne decyzje</h3>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <h2 class="accordion-body">Od dłuższego czasu odkładałam pieniądzę, dzięki czemu mogłam się zapisać na kurs florystyczny. Po jego ukończeniu otrzymałam certyfikat. Kurs zmotywował mnie jeszcze bardziej, aby założyć własną kwiaciarnię. Odeszłam z pracy na 3 miesiące przed końcem roku. W styczniu otrzymałam dotację na rozpoczęcie działalności, która bardzo mi pomogła w jej rozpoczęciu. Początkowo ruch był mały, ale wraz z latem zaczął się sezon ślubny i wtedy klientów było coraz więcej. Równo rok od założenia działalności zdecydowałam się na zatrudnienie pierwszego pracownika.</h2>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class=" btn btn-outline-secondary accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <h3>Obecnie</h3>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <h2 class="accordion-body">Mój zespół składa się z 3 osób, które tak jak ja kochają kwiaty. Razem codziennie pomagamy klientom. Staram się regularnie uczestniczyć w kursach florystycznych, aby znać nowości i nowinki florystyczne. Wraz z całyn zespołem jeździmy na wystawy i targi w celu nawiązania nowych kontaktów biznesowych. </h2>
+          </div>
+        </div>
+      </div>
+    
+
+    </section>
+    
+    <!-- ----------------------------------------HISTORY------------------------------------------->
+    <!-- ----------------------------------------OFFER------------------------------------------->
+    <section id="id2" class="container pt-md-5 pb-md-5">
+      <h3 class="text-center pt-md-3 pb-md-3">Oferta</h3>
+      <h1 class="text-center">Bukiety kwiatów</h1>
+      <hr />
+      <h4 class="text-center pb-md-5">Zobacz ofertę bukietów.</h4>
+
+      <div class="col-12 m-auto">
+        <div class="owl-carousel owl-theme">
+          <div class="item mb-4">
+            <div class="card border-0 shadow">
+              <img
+                src="./OFFER/Zdjęcie1.jpg"
+                alt="Zdjęcie1"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>FLOWERBOX</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img
+                src="./OFFER/Zdjęcie2.jpg"
+                alt="Zdjęcie2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Bukiety ślubne</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img
+                src="./OFFER/Zdjęcie3.jpg"
+                alt="Zdjęcie2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Bukiety prezentowe</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie4.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Kwiaty doniczkowe</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie5.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Kosze kwiatowe</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie6.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Do biura</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie7.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Pakowanie prezentów</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie8.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Wiązanki pogrzebowe</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card border-0 shadow">
+              <img src="./OFFER/Zdjęcie9.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="card-title text-center">
+                  <h3>Inne realizacje</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------OFFER------------------------------------------->
+    <!-- ----------------------------------------GUARANTEE------------------------------------------->
+    <section id="id3" class="container pt-md-5 pb-md-5">
+      <h3 class="text-center pb-md-3">Gwarancja świeżości</h3>
+      <h1 class="text-center">Dlaczego warto zamówić u nas?</h1>
+      <hr />
+      <h4 class="text-center pb-md-5">Codziennie nowa dostawa kwiatów.</h4>
+      <div class="card-group ps-md-5 pe-md-5" width="50%">
+        <div class="col-xl-4">
+          <div class="card ps-sm-4 pe-sm-4 pt-sm-4">
+            <img src="./Photo/Kwiaty1.jpg" class="card-img-top" alt="Photo" />
+            <div class="card-body">
+              <h3 class="card-title pb-xl-4 text-center">
+                Cieszysz się kwiatami dłużej
+              </h3>
+              <hr />
+              <h4 class="card-text text-center pt-xl-4 pb-xl-4">
+                Bardzo starannie dobieramy kwiaty w bukietach. Niektóre kwiaty
+                są częściowo zamknięte, niektóre średnio rozwinięte, a niekóre
+                są w pełni rozkwitu. Dzięki temu cieszysz się nimi dłużej i
+                obserwujesz jak pięknie rozkwitają. Dodatkowo do każdego bukietu
+                jest dołączona mini odżywka do kwiatów. Odżywi kwiaty i pozwoli
+                w pełni rozkwitnąć.
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card ps-sm-4 pe-sm-4 pt-sm-4">
+            <img src="./Photo/Kwiaty2.jpg" class="card-img-top" alt="Photo" />
+            <div class="card-body">
+              <h3 class="card-title pb-xl-4 text-center">
+                Szybka Dostawa zamówień
+              </h3>
+              <hr />
+              <h4 class="card-text text-center pt-xl-4 pb-xl-4">
+                Potrzebujesz bukietu na szybko? Realizuemy zamówienia
+                telefoniczne. Wystarczy zadzwonić do nas, możemy połoączyć się
+                na wideorozmowę. Zobaczysz jakie kwiaty są dostępne od ręki. Jeszcze tego samego dnia dostarczymy je pod wskazany adres.
+                Możemy również dołączyć do kwiatów czekoladki, czekoladę, Toffefee, Raffaello, Ferrero Rocher.
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card ps-sm-4 pe-sm-4 pt-sm-4">
+            <img src="./Photo/Kwiaty3.jpg" class="card-img-top" alt="Photo" />
+            <div class="card-body">
+              <h3 class="card-title pb-xl-4 text-center">
+                Pełna realizacja imprez
+              </h3>
+              <hr />
+              <h4 class="card-text text-center pt-xl-4 pb-xl-4">
+                Obsługujemy imprezy okolicznościowe. Masz ślub na głowie i
+                szukasz kwiatów? Zadzwoń i umów się na spotkanie. Mamy
+                dostępnych kilka pakietów z różnymi wariantami cenowymi. Kwiaty
+                do kościoła, prezenty dla rodziców, ozdoby na stół, tła do zdjęć
+                czy dekoracja samochodu. Wszystko w jednym miejscu. Prosto i
+                wygodnie.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------GUARANTEE------------------------------------------->
+    <!-- ----------------------------------------RECOMENDATIONS------------------------------------------->
+    <section id="id4" class="container pt-sm-5 pb-sm-5">
+      <h3 class="text-center pb-md-3">Rekomendacje</h3>
+      <h1 class="text-center">Opinie klientów</h1>
+      <hr />
+      <h4 class="text-center pb-xl-5">Zobacz co myślą nasi klienci</h4>
+
+      <div class="container mt-sm-5 mb-sm-5">
+        <div class="row g-2">
+          <div class="col-md-4">
+            <div class="card p-3 text-center px-4">
+              <div class="user-image pb-md-4">
+                <img
+                  src="./RECOMENDATIONS/R1.jpg"
+                  class="rounded-circle"
+                  width="80"
+                />
+              </div>
+
+              <div class="user-content">
+                <span class="mb-0">Magda</span>
+                <hr />
+                <div class="pt-md-3">
+                  <h4>
+                    Piękna, mała kwiaciarnia z dużym wyborem kwiatów. Kupowałam
+                    kwiaty do sesji. Po jej zakończeniu włożyłam je do wazonu i
+                    trzymały się jeszcze przez tydzień. Obsługa bardzo pomocna i
+                    miła, a ceny przystępne. Bardzo polecam.
+                  </h4>
+                </div>
+              </div>
+
+              <div class="ratings pt-md-4 pb-md-4">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-3 text-center px-4">
+              <div class="user-image pb-4">
+                <img
+                  src="./RECOMENDATIONS/R2.jpg"
+                  class="rounded-circle"
+                  width="80"
+                />
+              </div>
+
+              <div class="user-content">
+                <span class="mb-0">Wiktoria</span>
+                <hr />
+                <div class="pt-md-3">
+                  <h4>
+                    Bukiet przepiękny ❤ Kwiaty idealnie dopasowane, a w zasadzie
+                    przerosły moje oczekiwania, bukiet był cudny!
+                    Przesympatyczna Pani bardzo pomocna i serdeczna, a w
+                    kwiaciarni mnóstwo pięknych rzeczy do kupienia-polecam!!!
+                  </h4>
+                </div>
+              </div>
+
+              <div class="ratings pt-md-4 pb-md-4">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-3 text-center px-4">
+              <div class="user-image pb-4">
+                <img
+                  src="./RECOMENDATIONS/R3.jpg"
+                  class="rounded-circle"
+                  width="80"
+                />
+              </div>
+
+              <div class="user-content">
+                <span class="mb-0">Anna</span>
+                <hr />
+                <div class="pt-md-3">
+                  <h4>
+                    Miła obsługa, duży wybór kwiatów. Piękne gotowe bukiety.
+                    Polecam osobom, co potrzebują kwiatów na ostatnią chwilę
+                    bukiet gotowy w mniej niż 15 minut może 20 minut. Ceny
+                    bardzo przystępne. Pocecam kwiaciarnie. Jestem zadowolona.
+                  </h4>
+                </div>
+              </div>
+
+              <div class="ratings pt-md-4 pb-md-4">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------RECOMENDATIONS------------------------------------------->
+    <!-- ----------------------------------------owl-carousel------------------------------------------->
+    <section id="id5" class="container pt-md-5 pb-md-1">
+      <h3 class="text-center pb-md-3">Wielu zadowolonych klientów</h3>
+      <h1 class="text-center">Zdjęcia naszych klientów</h1>
+      <hr />
+      <h4 class="text-center pb-md-5">Zobacz zdjęcia bukietów u klientów</h4>
+    </section>
+
+    <section class="container1">
+      <div class="owl-carousel owl-theme">
+        <img src="./carousel1/z1.jpg" alt="Photo" />
+        <img src="./carousel1/z2.jpg" alt="Photo" />
+        <img src="./carousel1/z3.jpg" alt="Photo" />
+        <img src="./carousel1/z4.jpg" alt="Photo" />
+        <img src="./carousel1/z5.jpg" alt="Photo" />
+        <img src="./carousel1/z6.jpg" alt="Photo" />
+        <img src="./carousel1/z7.jpg" alt="Photo" />
+        <img src="./carousel1/z8.jpg" alt="Photo" />
+        <img src="./carousel1/z9.jpg" alt="Photo" />
+      </div>
+      <h3 class="text-center pt-md-3 pb-md-3">Więcej zdjęć możesz zobaczyć na naszym instagramie</h3>
+    </section>
+
+    <!-- ----------------------------------------owl-carousel------------------------------------------->
+    <!-- ----------------------------------------FOOTER------------------------------------------->
+    <!-- ------------------- START FOOTER I ------------------- -->
+    <section id="id6" class="container-fluid pt-md-5">
+      <h3 class="text-center pb-md-3">Zapraszam</h3>
+      <h1 class="text-center">Godziny otwarcia</h1>
+      <hr/>
+      <h4 class="text-center pb-md-5">Przyjdź i wybierz coś dla siebie</h4>
+      </section>
+
+    <section class="container-fluid">
+      <div class="row align-items-center text-center display3" id="background1">
+        <div class="text-center col-lg-4"></div>
+        <div class="text-center col-lg-4">
+          <h5 id="background2">
+            Poniedziałek – Piątek: 11:00 – 19:00 <br /><br />
+            Sobota: 10:00 – 15:00
+          </h5>
+        </div>
+        <div class="text-center col-lg-4"></div>
+      </div>
+    </section>
+    <!-- ------------------- STOP FOOTER I ------------------- -->
+    <!-- ------------------- START FOOTER II ------------------- -->
+    <footer class="footer1 container-fluid">
+      <div class="row align-items-center pt-md-4 pb-md-1 ps-md-2 pe-md-2">
+        <h5 class="col-lg-1"></h5>
+        <h5 class="text-center col-lg-1">KWIATOMANIA</h5>
+        <h5 class="text-center col-lg-1"></h5>
+        <h5 class="text-center col-lg-2">
+          Cynamonowa 33, <br />
+          02-776 Warszawa
+        </h5>
+        <h5 class="text-center col-lg-2"><a href="#"><i class="bx bxs-florist text-light"></i></a></h5>
+
+        <h5 class="text-center col-lg-2 text-center">
+          Zadzwoń i zamów <br />
+          tel: 668-191-535
+        </h5>
+        <h5 class="text-center col-lg-1"></h5>
+        <h5 class="text-center col-lg-2">
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-light"></a></i>
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-light"></i></a>
+          <a href="https://www.messenger.com/"><i class="bi bi-messenger text-light"></i></a>
+          <a href="https://www.whatsapp.com/?lang=pl"><i class="bi bi-whatsapp text-light"></i></a>
+        </h5>
+      </div>
+    </footer>
+    <!-- ------------------- STOP FOOTER II ------------------- -->
+    <!-- ----------------------------------------FOOTER------------------------------------------->
+
+    <!--Jquery Cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--OWL Carusel Min .js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
